@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <f:metadata charset="utf-8"/>
+    <title>Carga.uy</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
+    <h:outputScript src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></h:outputScript>
+    <script type="text/javascript">
+        function () agregue(){
+            alert("Prueba");
+        }
+    </script>
+</h:head>
+
+<h:body>
+    <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>Agregar Funcionario</h1>
+    </div>
+
+    <h:form>
+        <br></br>
+        <h:outputLabel for="id">ID</h:outputLabel>
+        <h:inputText id="id" value="#{addpp.id}"/>
+
+        <br></br>
+        <br></br>
+        <h:outputLabel for="desc">Descripcion</h:outputLabel>
+        <h:inputText id="desc" value="#{addpp.desc}"/>
+
+
+        <h:commandButton id="submit-button" value="Submit" action="#{(addpp.addDtp)}" onclick="agregue()"/>
+    </h:form>
+</h:body>
+</html>

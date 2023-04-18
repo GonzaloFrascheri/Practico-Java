@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <f:metadata charset="utf-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
+    <h:outputScript src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></h:outputScript>
+    <h:outputScript src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></h:outputScript>
+    <h:outputScript src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></h:outputScript>
+</h:head>
+
+<h:body>
+    <h:form>
+        <div class="form-group">
+            <h:outputLabel>ID a buscar</h:outputLabel>
+            <h:inputText id="nombre" value="#{buscarpp.id}"/>
+        </div>
+        <div>
+            <h:commandButton id="submit-button" value="Submit" action="#{buscarpp.findProceso()}"/>
+        </div>
+    </h:form>
+
+    <div class="table table-dark">
+        <h:dataTable var="spp" value="#{buscarpp.dtp}">
+            <h:column headerText="ID">
+                <h:outputText value="#{spp.id}" />
+            </h:column>
+
+            <h:column headerText="Descripcion">
+                <h:outputText value="#{spp.descripcion}" />
+            </h:column>
+        </h:dataTable>
+    </div>
+</h:body>
+</html>
+
